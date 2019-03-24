@@ -1,0 +1,24 @@
+global:
+  slack_api_url: https://hooks.slack.com/services/xx/yy/zz
+
+templates:
+- '/etc/alertmanager/template/*.tmpl'
+
+route:
+  group_by: ['alertname', 'cluster', 'service']
+  group_wait: 30s
+  group_interval: 5m
+  repeat_interval: 3h
+  receiver: team-X-pager-slack
+  routes:
+  - match:
+      severity: 'warning'
+    receiver: team-X-pager-slack
+
+receivers:
+- name: 'team-X-pager-slack'
+  pagerduty_configs:
+  - routing_key: dummykey_length_is_32_characters
+    url: http://pagerduty-api:8080/v2/enqueue
+  slack_configs:
+  - channel: '#alertmanager'
