@@ -1,5 +1,5 @@
-# Default to Go 1.11
-ARG GO_VERSION=1.11
+# Default to Go 1.12
+ARG GO_VERSION=1.12
 
 # First stage: build the executable.
 FROM golang:${GO_VERSION}-alpine AS build_base
