@@ -8,7 +8,7 @@ $ go get -u github.com/gin-gonic/gin
 
 ``` shell
 $ go version
-go version go1.11.4 darwin/amd64
+go version go1.12.4 darwin/amd64
 ```
 
 ## Init

@@ -1,7 +1,7 @@
 version: '2'
 services:
   prometheus:
-    image: prom/prometheus:v2.8.0
+    image: prom/prometheus:v2.9.1
     container_name: prometheus
     ports:
       - 9090:9090
@@ -10,7 +10,7 @@ services:
       - ./alert.rules:/etc/prometheus/my-alert.rules
     restart: always
   grafana:
-    image: grafana/grafana:6.0.2
+    image: grafana/grafana:6.1.4
     container_name: grafana
     ports:
       - 3000:3000
@@ -26,7 +26,7 @@ services:
       - /:/rootfs
     restart: always
   alertmanager:
-    image: prom/alertmanager:v0.16.1
+    image: prom/alertmanager:v0.16.2
     container_name: alertmanager
     ports:
       - 9093:9093
@@ -37,7 +37,7 @@ services:
       - '--log.level=debug'
     restart: always
   pagerduty-api:
-    image: transnano/pagerduty-api:v1.0.20190322
+    image: transnano/pagerduty-api:v1.0.20190423
     container_name: pagerduty-api
     ports:
       - 8080:8080
