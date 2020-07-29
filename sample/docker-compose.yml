@@ -26,7 +26,7 @@ services:
       - /:/rootfs
     restart: always
   alertmanager:
-    image: prom/alertmanager:v0.16.2
+    image: prom/alertmanager:v0.21.0
     container_name: alertmanager
     ports:
       - 9093:9093
