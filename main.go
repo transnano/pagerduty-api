@@ -17,7 +17,7 @@ func main() {
 	})
 	r.GET("/version", func(c *gin.Context) {
 		c.JSON(200, gin.H{
-			"version": "v1.0.20190322",
+			"version": "v1.0.20200817",
 		})
 	})
 	r.GET("/metrics", gin.WrapH(promhttp.Handler()))
