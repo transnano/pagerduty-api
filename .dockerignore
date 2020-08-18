@@ -1,5 +1,4 @@
-.git
 Dockerfile.*
 Dockerfile
 docker-compose.yml
-data/
+sample/

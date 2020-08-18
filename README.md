@@ -1,4 +1,4 @@
-# pagerduty-api
+# pagerduty-api ![Releases](https://github.com/transnano/pagerduty-api/workflows/Releases/badge.svg) ![Publish Docker image](https://github.com/transnano/pagerduty-api/workflows/Publish%20Docker%20image/badge.svg) ![Vulnerability Scan](https://github.com/transnano/pagerduty-api/workflows/Vulnerability%20Scan/badge.svg)
 
 ``` sh
 $ go get -u github.com/gin-gonic/gin
@@ -15,7 +15,7 @@ go version go1.15 linux/amd64
 
 ``` shell
 $ go mod init
-go: creating new go.mod: module gitlab.com/transnano/pagerduty-api
+go: creating new go.mod: module github.com/transnano/pagerduty-api
 ```
 
 ## Build

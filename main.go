@@ -8,6 +8,9 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
 
+// Version is program version
+var Version = "development"
+
 func main() {
 	r := gin.Default()
 	r.GET("/ping", func(c *gin.Context) {
@@ -17,7 +20,7 @@ func main() {
 	})
 	r.GET("/version", func(c *gin.Context) {
 		c.JSON(200, gin.H{
-			"version": "v1.0.20200817",
+			"version": fmt.Sprintf("%s", Version),
 		})
 	})
 	r.GET("/metrics", gin.WrapH(promhttp.Handler()))
