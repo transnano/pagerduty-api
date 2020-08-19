@@ -37,7 +37,7 @@ services:
       - '--log.level=debug'
     restart: always
   pagerduty-api:
-    image: transnano/pagerduty-api:v1.0.20190423
+    image: transnano/pagerduty-api:v1.1.0
     container_name: pagerduty-api
     ports:
       - 8080:8080
