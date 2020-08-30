@@ -1,5 +1,14 @@
 # pagerduty-api ![Releases](https://github.com/transnano/pagerduty-api/workflows/Releases/badge.svg) ![Publish Docker image](https://github.com/transnano/pagerduty-api/workflows/Publish%20Docker%20image/badge.svg) ![Vulnerability Scan](https://github.com/transnano/pagerduty-api/workflows/Vulnerability%20Scan/badge.svg)
 
+![License](https://img.shields.io/github/license/transnano/pagerduty-api?style=flat)
+
+![Container image version](https://img.shields.io/docker/v/transnano/pagerduty-api/latest?style=flat)
+![Container image size](https://img.shields.io/docker/image-size/transnano/pagerduty-api/latest?style=flat)
+![Container image pulls](https://img.shields.io/docker/pulls/transnano/pagerduty-api?style=flat)
+
+![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/transnano/pagerduty-api)
+[![Go Report Card](https://goreportcard.com/badge/github.com/transnano/pagerduty-api)](https://goreportcard.com/report/github.com/transnano/pagerduty-api)
+
 ``` sh
 $ go get -u github.com/gin-gonic/gin
 ```
