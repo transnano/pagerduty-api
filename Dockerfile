@@ -1,12 +1,28 @@
-FROM golang:1.15.0
+# Start by building the application.
+FROM golang:1.15.0-buster as build
+
 WORKDIR /go/src/github.com/transnano/pagerduty-api/
+# For building Go Module required
+ENV GOPROXY=direct
+ENV GO111MODULE=on
+ENV GOARCH=amd64
+ENV GOOS=linux
+ENV CGO_ENABLED=0
+# Copy the Go Modules manifests
+COPY go.mod go.mod
+COPY go.sum go.sum
+# cache deps before building and copying source so that we don't need to re-download as much
+# and so that source changes don't invalidate our downloaded layer
+RUN  go mod download
+# Copy the go source
 COPY . .
-RUN CGO_ENABLED=0 GOOS=linux go build -o pagerduty-api -ldflags "-s -w \
+# Build
+RUN  go build -a -o pagerduty-api -ldflags "-s -w \
 -X 'main.Version=$(git describe --tags --abbrev=0)'"
 
-FROM alpine:3.12.0
+# Now copy it into our base image.
+FROM gcr.io/distroless/base-debian10
+#FROM gcr.io/distroless/base
 LABEL maintainer="Transnano <transnano.jp@gmail.com>"
-RUN apk --no-cache add ca-certificates
-EXPOSE 8080
-COPY --from=0 /go/src/github.com/transnano/pagerduty-api/pagerduty-api /bin/pagerduty-api
-ENTRYPOINT ["/bin/pagerduty-api"]
+COPY --from=build /go/src/github.com/transnano/pagerduty-api/pagerduty-api /
+ENTRYPOINT ["/pagerduty-api"]
