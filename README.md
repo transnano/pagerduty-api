@@ -1,4 +1,4 @@
-# pagerduty-api ![Releases](https://github.com/transnano/pagerduty-api/workflows/Releases/badge.svg) ![Publish Docker image](https://github.com/transnano/pagerduty-api/workflows/Publish%20Docker%20image/badge.svg) ![Vulnerability Scan](https://github.com/transnano/pagerduty-api/workflows/Vulnerability%20Scan/badge.svg)
+# pagerduty-api ![Releases](https://github.com/transnano/pagerduty-api/workflows/Releases/badge.svg) ![Publish Docker image](https://github.com/transnano/pagerduty-api/workflows/Publish%20Docker%20image/badge.svg) ![Vulnerability Scan](https://github.com/transnano/pagerduty-api/workflows/Vulnerability%20Scan/badge.svg) ![Code Scanning(CodeQL)](https://github.com/transnano/pagerduty-api/workflows/Code%20Scanning(CodeQL)/badge.svg)
 
 ![License](https://img.shields.io/github/license/transnano/pagerduty-api?style=flat)
 
