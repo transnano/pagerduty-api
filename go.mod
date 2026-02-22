@@ -2,7 +2,7 @@ module github.com/transnano/pagerduty-api
 
 go 1.23.0
 
-toolchain go1.25.5
+toolchain go1.26.0
 
 require (
 	github.com/gin-gonic/gin v1.11.0
